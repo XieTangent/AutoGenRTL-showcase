@@ -2,9 +2,7 @@
 
 ## 📌 專案簡介
 
-AutoGenRTL 是一套自動將自然語言描述轉換為 Verilog RTL 模組的工具。該系統結合了大型語言模型（LLM），模仿工程師在編寫 RTL 時的修正流程，並透過 Testbench 驗證生成結果的正確性。
-
-本專案致力於提升數位邏輯設計效率，具有潛在教育與工業應用價值。
+AutoGenRTL 是一套自動將自然語言描述轉換為 Verilog RTL 模組的架構。該系統結合了大型語言模型（LLM），模仿工程師在編寫代碼時的修正流程，根據每次的錯誤訊息或與預期不同的行為進行跌代修正，並透過 Testbench 驗證生成結果的正確性。
 
 ---
 
@@ -23,20 +21,17 @@ AutoGenRTL 是一套自動將自然語言描述轉換為 Verilog RTL 模組的�
 
 ![AutoGenRTL 海報](poster/system_architecture.png)
 
-👉 [點我下載 PDF 海報](poster/system_architecture.pdf)
 
 ---
 
 ## 💡 技術亮點
 
-- 使用 OpenAI GPT-4 API 建構語意理解與程式生成流程
+- 使用 OpenAI API 建構語意理解與程式生成流程
 - 自訂 Prompt 模板模仿 RTL 工程師的修正邏輯
+- 根據錯誤訊息以及非預期行為對 Prompt 進行優化
+- 透過生成時序圖增加 Prompt 輸入，提高 sequential 電路的成功率
 - Python 串接自動測試系統驗證 Verilog 模組
-- 將語言模型應用於硬體開發輔助的創新實驗
+- 將語言模型應用於硬體開發(HDL)輔助的創新實驗
 
 ---
-
-## 📎 範例輸入與輸出
-
-輸入（自然語言）：
 
